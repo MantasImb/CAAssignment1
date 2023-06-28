@@ -1,0 +1,25 @@
+@use "mixins";
+
+.header {
+  @include mixins.flexBox($direction: row, $justify: space-between);
+  position: sticky;
+  top: 0;
+  margin: 1.5rem;
+  width: calc(100% - 3rem);
+  z-index: 1000;
+}
+
+.welcome-section {
+  @include mixins.flexBox($align: start);
+  padding: 4rem 2rem;
+  gap: 2rem;
+
+  &__heading {
+    width: 66vw;
+  }
+
+  &__description {
+    width: 55vw;
+    line-height: 2rem;
+  }
+}

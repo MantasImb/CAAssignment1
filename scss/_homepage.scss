@@ -1,0 +1,43 @@
+@use "variables";
+
+.header {
+  background-color: white;
+}
+.navigation {
+  &__burger {
+    &-top,
+    &-middle,
+    &-bottom {
+      width: 1.5rem;
+      height: 0.25rem;
+      background-color: $dark-color;
+      margin: 0.25rem;
+      border-radius: 0.2rem;
+    }
+  }
+}
+
+.welcome-section {
+  background-image: url("../assets/graphic.png");
+  background-repeat: no-repeat;
+  background-position: 45vw 0;
+  background-size: 27rem;
+
+  &__subheading {
+    font-size: large;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: 0.1rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $secondary-color;
+  }
+}

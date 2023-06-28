@@ -1,7 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  margin: 1.5rem;
+  width: calc(100% - 3rem);
+  z-index: 1000;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+.welcome-section__heading {
+  width: 66vw;
+}
+.welcome-section__description {
+  width: 55vw;
+  line-height: 2rem;
+}
+
+.button {
+  display: inline-block;
+  background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(225deg, #dabe45, #ff8139, #ff3939, #ff3998) border-box;
+  padding: 1.25rem 3.5rem;
+  border: 0.3rem solid transparent;
+  border-radius: 5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.header {
+  background-color: white;
+}
+
+.navigation__burger-top, .navigation__burger-middle, .navigation__burger-bottom {
+  width: 1.5rem;
+  height: 0.25rem;
+  background-color: #999999;
+  margin: 0.25rem;
+  border-radius: 0.2rem;
+}
+
+.welcome-section {
+  background-image: url("../assets/graphic.png");
+  background-repeat: no-repeat;
+  background-position: 45vw 0;
+  background-size: 27rem;
+}
+.welcome-section__subheading {
+  font-size: large;
+  font-weight: 700;
+  color: #ff3998;
+  letter-spacing: 0.1rem;
+}
+.welcome-section__heading {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.welcome-section__description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #555;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+@use "../variables";
+@use "../mixins";
+
+.button {
+  display: inline-block;
+  background: linear-gradient(#ffffff 0 0) padding-box,
+    linear-gradient(225deg, #dabe45, #ff8139, #ff3939, #ff3998) border-box;
+  padding: 1.25rem 3.5rem;
+  border: 0.3rem solid transparent;
+  border-radius: 5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
