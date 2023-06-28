@@ -23,3 +23,9 @@
     line-height: 2rem;
   }
 }
+
+.CTA-section {
+  @include flexBox;
+  padding: 7rem 2rem 2rem;
+  gap: 2rem;
+}

@@ -41,3 +41,20 @@
     color: $secondary-color;
   }
 }
+
+.CTA-section {
+  background: linear-gradient(260deg, #ecff9793, rgba(255, 174, 0, 0) 20%),
+    linear-gradient(127deg, #ff3999c0, #ff5e006b, rgba(112, 255, 112, 0.096)),
+    linear-gradient(336deg, #ff5e00bb, rgba(255, 153, 0, 0.301));
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}

@@ -41,6 +41,15 @@ body {
   line-height: 2rem;
 }
 
+.CTA-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 2rem 2rem;
+  gap: 2rem;
+}
+
 .button {
   display: inline-block;
   background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(225deg, #dabe45, #ff8139, #ff3939, #ff3998) border-box;
@@ -83,6 +92,19 @@ body {
   font-size: 1.25rem;
   font-weight: 400;
   color: #555;
+}
+
+.CTA-section {
+  background: linear-gradient(260deg, rgba(236, 255, 151, 0.5764705882), rgba(255, 174, 0, 0) 20%), linear-gradient(127deg, rgba(255, 57, 153, 0.7529411765), rgba(255, 94, 0, 0.4196078431), rgba(112, 255, 112, 0.096)), linear-gradient(336deg, rgba(255, 94, 0, 0.7333333333), rgba(255, 153, 0, 0.301));
+}
+.CTA-section__heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.CTA-section__text {
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
