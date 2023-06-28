@@ -58,3 +58,60 @@
     line-height: 2rem;
   }
 }
+
+.showcase-section {
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $secondary-color;
+    line-height: 2rem;
+  }
+
+  &__link {
+    font-weight: 600;
+    text-underline-offset: 0.25rem;
+  }
+
+  &__card-wrapper {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  &__card-wrapper::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+.CTA-section-second {
+  background-image: url("../assets/upsell-footer-image.svg");
+  background-repeat: no-repeat;
+  background-position: 57vw 9rem;
+  border: 0.2rem #eeeeee;
+  border-style: solid none;
+
+  &__subheading {
+    font-size: large;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: 0.1rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $secondary-color;
+  }
+}
+
+.CTA-section-second:after {
+  content: "";
+  border-bottom: 0.2rem solid #eeeeee;
+}

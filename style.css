@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +7,10 @@
 
 body {
   overflow-x: hidden;
+}
+
+a {
+  color: inherit;
 }
 
 * {
@@ -71,6 +75,49 @@ body {
   }
 }
 
+.showcase-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0 5rem 2rem;
+}
+.showcase-section__card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.CTA-section-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 3rem;
+  gap: 2rem;
+  position: relative;
+}
+.CTA-section-second__heading {
+  width: 60vw;
+}
+.CTA-section-second__text {
+  width: 50vw;
+  line-height: 2rem;
+}
+
+.CTA-section-second:after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+}
+
 .button {
   display: inline-block;
   background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(225deg, #dabe45, #ff8139, #ff3939, #ff3998) border-box;
@@ -79,6 +126,47 @@ body {
   border-radius: 5rem;
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+.NFT-card {
+  background-color: #eeeeee;
+  border-radius: 1rem;
+  margin-right: 2rem;
+}
+.NFT-card__info {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.NFT-card__series {
+  font-size: 0.75rem;
+  color: #ff8139;
+  font-weight: 500;
+}
+.NFT-card__top-bit-tag {
+  font-size: 0.75rem;
+  color: #555;
+  text-align: end;
+}
+.NFT-card__heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.NFT-card__price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: end;
+}
+.NFT-card__price-currency {
+  margin: 0 0.5rem;
+}
+.NFT-card__number, .NFT-card__time-left {
+  font-size: 1.1rem;
+  color: #555;
+}
+.NFT-card__time-left {
+  text-align: end;
 }
 
 .header {
@@ -126,6 +214,56 @@ body {
 .CTA-section__text {
   font-size: 1.25rem;
   line-height: 2rem;
+}
+
+.showcase-section__heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.showcase-section__text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 2rem;
+}
+.showcase-section__link {
+  font-weight: 600;
+  text-underline-offset: 0.25rem;
+}
+.showcase-section__card-wrapper {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.showcase-section__card-wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.CTA-section-second {
+  background-image: url("../assets/upsell-footer-image.svg");
+  background-repeat: no-repeat;
+  background-position: 57vw 9rem;
+  border: 0.2rem #eeeeee;
+  border-style: solid none;
+}
+.CTA-section-second__subheading {
+  font-size: large;
+  font-weight: 700;
+  color: #ff3998;
+  letter-spacing: 0.1rem;
+}
+.CTA-section-second__heading {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.CTA-section-second__text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.CTA-section-second:after {
+  content: "";
+  border-bottom: 0.2rem solid #eeeeee;
 }
 
 /*# sourceMappingURL=style.css.map */
