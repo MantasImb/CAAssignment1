@@ -4,8 +4,8 @@
   @include mixins.flexBox($direction: row, $justify: space-between);
   position: sticky;
   top: 0;
-  margin: 1.5rem;
-  width: calc(100% - 3rem);
+  padding: 1.5rem;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -28,4 +28,26 @@
   @include flexBox;
   padding: 7rem 2rem 2rem;
   gap: 2rem;
+}
+
+.sponsor-section {
+  @include flexBox($direction: row, $justify: space-evenly);
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 1rem;
+  &__image {
+  }
+
+  #boomerang {
+    display: none;
+  }
+
+  @include tabletMediaQuery {
+    #boomerang {
+      display: block;
+    }
+    #boom {
+      display: none;
+    }
+  }
 }
