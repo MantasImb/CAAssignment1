@@ -115,3 +115,38 @@
   content: "";
   border-bottom: 0.2rem solid #eeeeee;
 }
+
+.footer {
+  &__logo {
+  }
+  &__text {
+    font-size: 1.25rem;
+    color: $secondary-color;
+  }
+  &__socials {
+    list-style: none;
+  }
+  &__navigation {
+    &-category {
+      &-name {
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: $secondary-color;
+        text-transform: uppercase;
+      }
+    }
+
+    &-list {
+      list-style: none;
+      &-link {
+        font-size: 1.25rem;
+        line-height: 100%;
+        color: $secondary-color;
+      }
+    }
+  }
+  &__copyright-tag {
+    font-size: 1.25rem;
+    color: #999;
+  }
+}

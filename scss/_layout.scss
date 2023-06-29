@@ -92,3 +92,40 @@
   left: 0;
   right: 0;
 }
+
+.footer {
+  @include flexBox($align: start);
+  gap: 1.5rem;
+  margin: 3rem 2rem;
+  &__logo {
+  }
+  &__text {
+  }
+  &__socials {
+    @include flexBox($direction: row);
+    gap: 1.25rem;
+    &-item {
+    }
+  }
+  &__navigation {
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    gap: 2rem 1rem;
+    margin-top: 2rem;
+    &-category {
+      &-name {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &-list {
+      @include flexBox($align: start);
+      gap: 0.75rem;
+      &-link {
+      }
+    }
+  }
+  &__copyright-tag {
+    margin: 2rem 0;
+  }
+}
