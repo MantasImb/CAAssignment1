@@ -15,28 +15,36 @@
           <div class="navigation__burger-middle"></div>
           <div class="navigation__burger-bottom"></div>
         </div>
-        <!-- <ul class="navigation__list">
-          <li class="navigation__list-item"><a href="#">Features</a></li>
-          <li class="navigation__list-item"><a href="#">About</a></li>
-          <li class="navigation__list-item"><a href="#">Launch</a></li>
-          <li class="navigation__list-item"><a href="#">Sign Up</a></li>
-        </ul> -->
+        <ul class="navigation__list">
+          <li class="navigation__list-item">
+            <a class="navigation__list-item-link" href="#">Features</a>
+          </li>
+          <li class="navigation__list-item">
+            <a class="navigation__list-item-link" href="#">About</a>
+          </li>
+          <li class="navigation__list-item">
+            <a class="navigation__list-item-link" href="#">Launch</a>
+          </li>
+          <li class="navigation__list-item">
+            <a class="navigation__list-item-link navigation__sign-up" href="#"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
       <section class="welcome-section">
         <h2 class="welcome-section__subheading">LAUNCHING SOON</h2>
-        <h1 class="welcome-section__heading">An NFT like no other</h1>
+        <h1 class="welcome-section__heading">
+          An NFT like<br />
+          no other
+        </h1>
         <p class="welcome-section__description">
           Don't miss out on the release of our new NFT. Sign up below to receive
           updates when we go live.
         </p>
         <button class="button">Sign Up</button>
-        <!-- <img
-          class="welcome-section__image"
-          src="assets/graphic.png"
-          alt="hero"
-        /> -->
       </section>
       <section class="CTA-section">
         <h2 class="CTA-section__heading">Free NFT for early birds</h2>
@@ -66,6 +74,12 @@
           class="sponsor-section__image"
           src="./assets/companies/qrco.svg"
           alt="qrco logo"
+        />
+        <img
+          id="opendoor"
+          class="sponsor-section__image"
+          src="./assets/companies/openDoor.svg"
+          alt="opendoor logo"
         />
         <img
           class="sponsor-section__image"
@@ -183,47 +197,49 @@
       </section>
     </main>
     <footer class="footer">
-      <img class="footer__logo" src="./assets/logo.svg" alt="logo" />
-      <p class="footer__text">Exclusive NFT Collection</p>
-      <ul class="footer__socials">
-        <li class="footer__socials-item">
-          <a href="https://facebook.com" target="_blank">
-            <img
-              class="footer__socials-icon"
-              src="./assets/socials/facebook.svg"
-              alt="facebook logo"
-            />
-          </a>
-        </li>
-        <li class="footer__socials-item">
-          <a href="https://twitter.com" target="_blank">
-            <img
-              class="footer__socials-icon"
-              src="./assets/socials/twitter.svg"
-              alt="twitter logo"
-            />
-          </a>
-        </li>
-        <li class="footer__socials-item">
-          <a href="https://instagram.com" target="_blank">
-            <img
-              class="footer__socials-icon"
-              src="./assets/socials/instagram.svg"
-              alt="instagram logo"
-              fill="lightgray"
-            />
-          </a>
-        </li>
-        <li class="footer__socials-item">
-          <a href="https://tiktok.com" target="_blank">
-            <img
-              class="footer__socials-icon"
-              src="./assets/socials/tiktok.svg"
-              alt="tiktok logo"
-            />
-          </a>
-        </li>
-      </ul>
+      <div class="footer__wrapper">
+        <img class="footer__logo" src="./assets/logo.svg" alt="logo" />
+        <p class="footer__text">Exclusive NFT Collection</p>
+        <ul class="footer__socials">
+          <li class="footer__socials-item">
+            <a href="https://facebook.com" target="_blank">
+              <img
+                class="footer__socials-icon"
+                src="./assets/socials/facebook.svg"
+                alt="facebook logo"
+              />
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://twitter.com" target="_blank">
+              <img
+                class="footer__socials-icon"
+                src="./assets/socials/twitter.svg"
+                alt="twitter logo"
+              />
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://instagram.com" target="_blank">
+              <img
+                class="footer__socials-icon"
+                src="./assets/socials/instagram.svg"
+                alt="instagram logo"
+                fill="lightgray"
+              />
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://tiktok.com" target="_blank">
+              <img
+                class="footer__socials-icon"
+                src="./assets/socials/tiktok.svg"
+                alt="tiktok logo"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
       <nav class="footer__navigation">
         <div class="footer__navigation-category">
           <p class="footer__navigation-category-name">About</p>
@@ -257,6 +273,7 @@
         </div>
       </nav>
       <p class="footer__copyright-tag">© Copyright 2022 NFTlanding</p>
+      <p class="footer__launch-tag">Launching August 2022</p>
     </footer>
     <script src="./script.js"></script>
   </body>

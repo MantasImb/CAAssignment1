@@ -8,12 +8,23 @@
     &-top,
     &-middle,
     &-bottom {
-      width: 1.5rem;
-      height: 0.25rem;
       background-color: $dark-color;
-      margin: 0.25rem;
+
       border-radius: 0.2rem;
     }
+  }
+
+  &__list {
+    list-style: none;
+    &-item {
+      &-link {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__sign-up {
+    color: $primary-color;
   }
 }
 
@@ -23,16 +34,34 @@
   background-position: 45vw 0;
   background-size: 27rem;
 
+  @include tabletMediaQuery {
+    background-position: 50vw 0;
+    background-size: 35rem;
+  }
+
+  @include desktopMediaQuery {
+    background-position: 55vw -5vh;
+    background-size: 40rem;
+  }
+
   &__subheading {
-    font-size: large;
+    font-size: 1.2;
     font-weight: 700;
     color: $primary-color;
     letter-spacing: 0.1rem;
+
+    @include tabletMediaQuery {
+      font-size: 1.1rem;
+    }
   }
 
   &__heading {
     font-size: 3rem;
     font-weight: 900;
+
+    @include tabletMediaQuery {
+      font-size: 4rem;
+    }
   }
 
   &__description {
@@ -43,7 +72,7 @@
 }
 
 .CTA-section {
-  background: linear-gradient(260deg, #ecff9793, rgba(255, 174, 0, 0) 20%),
+  background: linear-gradient(235deg, #81ff769f, rgba(255, 174, 0, 0) 20%),
     linear-gradient(127deg, #ff3999c0, #ff5e006b, rgba(112, 255, 112, 0.096)),
     linear-gradient(336deg, #ff5e00bb, rgba(255, 153, 0, 0.301));
 
@@ -92,6 +121,14 @@
   border: 0.2rem #eeeeee;
   border-style: solid none;
 
+  @include tabletMediaQuery {
+    background-position: 57vw 3rem;
+  }
+
+  @include desktopMediaQuery {
+    background-position: 69vw 2rem;
+  }
+
   &__subheading {
     font-size: large;
     font-weight: 700;
@@ -114,11 +151,13 @@
 .CTA-section-second:after {
   content: "";
   border-bottom: 0.2rem solid #eeeeee;
+
+  @include tabletMediaQuery {
+    border-bottom: none;
+  }
 }
 
 .footer {
-  &__logo {
-  }
   &__text {
     font-size: 1.25rem;
     color: $secondary-color;
@@ -145,7 +184,8 @@
       }
     }
   }
-  &__copyright-tag {
+  &__copyright-tag,
+  &__launch-tag {
     font-size: 1.25rem;
     color: #999;
   }

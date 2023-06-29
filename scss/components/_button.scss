@@ -10,4 +10,12 @@
   border-radius: 5rem;
   font-size: 1.25rem;
   font-weight: 600;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(170deg, #dabe45, #ff8139, #ff3939, #ff3998)
+    border-box;
+  border: 0.3rem solid #ff00004d;
 }
