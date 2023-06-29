@@ -1,0 +1,242 @@
+@use "mixins";
+
+.header {
+  @include mixins.flexBox($direction: row, $justify: space-between);
+  position: sticky;
+  top: 0;
+  padding: 1.5rem;
+  width: 100%;
+  z-index: 1000;
+
+  @include tabletMediaQuery {
+    padding: 2rem 3rem;
+  }
+
+  @include desktopMediaQuery {
+    padding: 2rem 6rem;
+  }
+
+  &__burger {
+    padding: 0.3rem;
+    &-top,
+    &-middle,
+    &-bottom {
+      width: 1.5rem;
+      height: 0.25rem;
+      margin: 0.25rem;
+    }
+
+    @include tabletMediaQuery {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  &__list {
+    @include flexBox($direction: row, $justify: space-evenly);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    gap: 1rem;
+    transform: translateX(120%);
+
+    @include tabletMediaQuery {
+      opacity: 1;
+      transform: translateX(0);
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .active {
+    opacity: 1;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    margin-top: 5rem;
+    padding: 2rem;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.welcome-section {
+  @include mixins.flexBox($align: start);
+  padding: 4rem 2rem;
+  gap: 2rem;
+
+  @include tabletMediaQuery {
+    padding: 4rem 3rem;
+  }
+
+  @include desktopMediaQuery {
+    padding: 4rem 6rem;
+  }
+
+  &__heading {
+    width: 66vw;
+  }
+
+  &__description {
+    width: 55vw;
+    line-height: 2rem;
+  }
+}
+
+.CTA-section {
+  @include flexBox($align: start);
+  padding: 7rem 2rem 2rem;
+  gap: 2rem;
+
+  @include tabletMediaQuery {
+    padding: 6rem 4rem 2rem;
+    margin: 0 2rem;
+    border-radius: 1rem;
+  }
+
+  @include desktopMediaQuery {
+    margin: 0 6rem;
+  }
+}
+
+.sponsor-section {
+  @include flexBox($direction: row, $justify: space-evenly);
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 1rem;
+
+  #boomerang,
+  #opendoor {
+    display: none;
+  }
+
+  @include tabletMediaQuery {
+    #boomerang,
+    #opendoor {
+      display: block;
+    }
+    #boom {
+      display: none;
+    }
+  }
+}
+
+.showcase-section {
+  @include flexBox($align: start);
+  gap: 1rem;
+  padding: 2rem 0 5rem 2rem;
+
+  @include tabletMediaQuery {
+    padding-bottom: 7rem;
+    gap: 3rem;
+  }
+
+  @include desktopMediaQuery {
+    margin: 0 4rem;
+  }
+
+  &__card-wrapper {
+    @include flexBox($direction: row, $justify: space-between);
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+.CTA-section-second {
+  @include flexBox($align: start);
+  padding: 3rem 2rem;
+  gap: 2rem;
+  position: relative;
+
+  @include tabletMediaQuery {
+    padding: 6rem 2rem;
+  }
+
+  @include desktopMediaQuery {
+    padding: 6rem 6rem;
+    margin-bottom: 4rem;
+  }
+
+  &__heading {
+    width: 60vw;
+  }
+
+  &__text {
+    width: 50vw;
+    line-height: 2rem;
+  }
+}
+
+.CTA-section-second:after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+}
+
+.footer {
+  @include flexBox($align: start, $justify: space-between);
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem 2rem;
+
+  @include tabletMediaQuery {
+    flex-direction: row;
+  }
+
+  @include desktopMediaQuery {
+    margin: 2rem 6rem;
+  }
+
+  &__wrapper {
+    @include flexBox($align: start);
+    gap: 1.5rem;
+  }
+
+  &__socials {
+    @include flexBox($direction: row);
+    gap: 1.25rem;
+  }
+  &__navigation {
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    gap: 2rem 1rem;
+    margin-top: 2rem;
+    &-category {
+      &-name {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    @include desktopMediaQuery {
+      grid-template-columns: repeat(4, 10rem);
+    }
+
+    &-list {
+      @include flexBox($align: start);
+      gap: 0.75rem;
+    }
+  }
+
+  &__copyright-tag,
+  &__launch-tag {
+    margin: 2rem 0;
+
+    @include tabletMediaQuery {
+      width: calc(50% - 1rem);
+    }
+  }
+
+  &__launch-tag {
+    display: none;
+    text-align: end;
+
+    @include tabletMediaQuery {
+      display: block;
+    }
+  }
+}

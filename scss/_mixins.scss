@@ -1,0 +1,18 @@
+@mixin flexBox($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin tabletMediaQuery {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktopMediaQuery {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

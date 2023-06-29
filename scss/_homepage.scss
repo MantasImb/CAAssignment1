@@ -1,0 +1,225 @@
+@use "variables";
+
+.header {
+  background-color: white;
+  &__burger {
+    cursor: pointer;
+    border-radius: 100%;
+    &-top,
+    &-middle,
+    &-bottom {
+      background-color: $dark-color;
+      border-radius: 0.2rem;
+    }
+  }
+
+  &__burger:hover {
+    background-color: #eeeeee;
+  }
+}
+.navigation {
+  &__list {
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+    list-style: none;
+
+    @include tabletMediaQuery {
+      opacity: 1;
+      cursor: pointer;
+      pointer-events: all;
+    }
+
+    &-item {
+      &-link {
+        text-decoration: none;
+      }
+
+      &-link:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__sign-up {
+    color: $primary-color;
+  }
+
+  .active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    pointer-events: all;
+  }
+}
+
+.welcome-section {
+  background-image: url("../assets/graphic.png");
+  background-repeat: no-repeat;
+  background-position: 45vw 0;
+  background-size: 27rem;
+
+  @include tabletMediaQuery {
+    background-position: 50vw 0;
+    background-size: 35rem;
+  }
+
+  @include desktopMediaQuery {
+    background-position: 55vw -5vh;
+    background-size: 40rem;
+  }
+
+  &__subheading {
+    font-size: 1.2;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: 0.1rem;
+
+    @include tabletMediaQuery {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 900;
+
+    @include tabletMediaQuery {
+      font-size: 4rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $secondary-color;
+  }
+}
+
+.CTA-section {
+  background: linear-gradient(235deg, #81ff769f, rgba(255, 174, 0, 0) 20%),
+    linear-gradient(127deg, #ff3999c0, #ff5e006b, rgba(112, 255, 112, 0.096)),
+    linear-gradient(336deg, #ff5e00bb, rgba(255, 153, 0, 0.301));
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+
+.showcase-section {
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $secondary-color;
+    line-height: 2rem;
+  }
+
+  &__link {
+    font-weight: 600;
+    text-underline-offset: 0.25rem;
+  }
+
+  &__card-wrapper {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  &__card-wrapper::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+.CTA-section-second {
+  background-image: url("../assets/upsell-footer-image.svg");
+  background-repeat: no-repeat;
+  background-position: 57vw 9rem;
+  border: 0.2rem #eeeeee;
+  border-style: solid none;
+
+  @include tabletMediaQuery {
+    background-position: 57vw 3rem;
+  }
+
+  @include desktopMediaQuery {
+    background-position: 69vw 2rem;
+  }
+
+  &__subheading {
+    font-size: large;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: 0.1rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $secondary-color;
+  }
+}
+
+.CTA-section-second:after {
+  content: "";
+  border-bottom: 0.2rem solid #eeeeee;
+
+  @include tabletMediaQuery {
+    border-bottom: none;
+  }
+}
+
+.footer {
+  &__text {
+    font-size: 1.25rem;
+    color: $secondary-color;
+  }
+  &__socials {
+    list-style: none;
+  }
+  &__navigation {
+    &-category {
+      &-name {
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: $secondary-color;
+        text-transform: uppercase;
+      }
+    }
+
+    &-list {
+      list-style: none;
+      &-link {
+        font-size: 1.25rem;
+        line-height: 100%;
+        color: $secondary-color;
+        a {
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__copyright-tag,
+  &__launch-tag {
+    font-size: 1.25rem;
+    color: #999;
+  }
+}
