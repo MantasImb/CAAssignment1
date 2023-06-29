@@ -15,10 +15,9 @@
   @include desktopMediaQuery {
     padding: 2rem 6rem;
   }
-}
 
-.navigation {
   &__burger {
+    padding: 0.3rem;
     &-top,
     &-middle,
     &-bottom {
@@ -31,14 +30,35 @@
       display: none;
     }
   }
+}
 
+.navigation {
   &__list {
-    display: none;
+    @include flexBox($direction: row, $justify: space-evenly);
+    opacity: 0;
+    width: 0;
+    height: 0;
     gap: 1rem;
+    transform: translateX(120%);
 
     @include tabletMediaQuery {
-      @include flexBox($direction: row, $justify: space-evenly);
+      opacity: 1;
+      transform: translateX(0);
+      width: auto;
+      height: auto;
     }
+  }
+
+  .active {
+    opacity: 1;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    margin-top: 5rem;
+    padding: 2rem;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
   }
 }
 
@@ -86,8 +106,6 @@
   flex-wrap: wrap;
   gap: 2rem;
   margin: 3rem 1rem;
-  &__image {
-  }
 
   #boomerang,
   #opendoor {
@@ -117,10 +135,6 @@
 
   @include desktopMediaQuery {
     margin: 0 4rem;
-  }
-
-  &__heading,
-  &__text {
   }
 
   &__card-wrapper {
@@ -183,15 +197,9 @@
     gap: 1.5rem;
   }
 
-  &__logo {
-  }
-  &__text {
-  }
   &__socials {
     @include flexBox($direction: row);
     gap: 1.25rem;
-    &-item {
-    }
   }
   &__navigation {
     display: grid;
@@ -211,8 +219,6 @@
     &-list {
       @include flexBox($align: start);
       gap: 0.75rem;
-      &-link {
-      }
     }
   }
 

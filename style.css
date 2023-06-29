@@ -38,28 +38,49 @@ a {
     padding: 2rem 6rem;
   }
 }
-
-.navigation__burger-top, .navigation__burger-middle, .navigation__burger-bottom {
+.header__burger {
+  padding: 0.3rem;
+}
+.header__burger-top, .header__burger-middle, .header__burger-bottom {
   width: 1.5rem;
   height: 0.25rem;
   margin: 0.25rem;
 }
 @media (min-width: 768px) {
-  .navigation__burger {
+  .header__burger {
     display: none;
   }
 }
+
 .navigation__list {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  width: 0;
+  height: 0;
   gap: 1rem;
+  transform: translateX(120%);
 }
 @media (min-width: 768px) {
   .navigation__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    opacity: 1;
+    transform: translateX(0);
+    width: auto;
+    height: auto;
   }
+}
+.navigation .active {
+  opacity: 1;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  margin-top: 5rem;
+  padding: 2rem;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
 }
 
 .welcome-section {
@@ -330,19 +351,46 @@ button:hover {
 .header {
   background-color: white;
 }
-
-.navigation__burger-top, .navigation__burger-middle, .navigation__burger-bottom {
+.header__burger {
+  cursor: pointer;
+  border-radius: 100%;
+}
+.header__burger-top, .header__burger-middle, .header__burger-bottom {
   background-color: #999999;
   border-radius: 0.2rem;
 }
+.header__burger:hover {
+  background-color: #eeeeee;
+}
+
 .navigation__list {
+  opacity: 0;
+  cursor: default;
+  pointer-events: none;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .navigation__list {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: all;
+  }
 }
 .navigation__list-item-link {
   text-decoration: none;
 }
+.navigation__list-item-link:hover {
+  text-decoration: underline;
+}
 .navigation__sign-up {
   color: #ff3998;
+}
+.navigation .active {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .welcome-section {
@@ -487,6 +535,12 @@ button:hover {
   font-size: 1.25rem;
   line-height: 100%;
   color: #555;
+}
+.footer__navigation-list-link a {
+  text-decoration: none;
+}
+.footer__navigation-list-link a:hover {
+  text-decoration: underline;
 }
 .footer__copyright-tag, .footer__launch-tag {
   font-size: 1.25rem;

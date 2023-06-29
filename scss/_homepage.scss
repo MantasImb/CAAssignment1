@@ -2,29 +2,55 @@
 
 .header {
   background-color: white;
-}
-.navigation {
   &__burger {
+    cursor: pointer;
+    border-radius: 100%;
     &-top,
     &-middle,
     &-bottom {
       background-color: $dark-color;
-
       border-radius: 0.2rem;
     }
   }
 
+  &__burger:hover {
+    background-color: #eeeeee;
+  }
+}
+.navigation {
   &__list {
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
     list-style: none;
+
+    @include tabletMediaQuery {
+      opacity: 1;
+      cursor: pointer;
+      pointer-events: all;
+    }
+
     &-item {
       &-link {
         text-decoration: none;
+      }
+
+      &-link:hover {
+        text-decoration: underline;
       }
     }
   }
 
   &__sign-up {
     color: $primary-color;
+  }
+
+  .active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    pointer-events: all;
   }
 }
 
@@ -181,6 +207,13 @@
         font-size: 1.25rem;
         line-height: 100%;
         color: $secondary-color;
+        a {
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
